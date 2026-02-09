@@ -1,12 +1,14 @@
 
+experimental_monorepo_root = true
+
 [tools]
 biome = "latest"
 node = "24.13.0"
+pnpm = "latest"
 
 [env]
 MISE_EXPERIMENTAL = 1
 
-experimental_monorepo_root = true
 
 [tasks.lint]
 description = "Run biome lint"

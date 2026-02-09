@@ -1,4 +1,9 @@
 
+Project requirement
+- mise
+- moonrepo
+- postgres
+
 monorepo todo list
 - [x] set up pnpm-workspace.yml for each packages
 - [x] boiler plate each packages 

@@ -1,0 +1,2 @@
+[env]
+ceiling_paths = ["~/Development/droplets/sandbox/monorepo_ts_rpc"]

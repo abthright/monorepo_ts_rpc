@@ -61,6 +61,6 @@ WORKDIR /app/apps/platform
 
 RUN mise build
 
-EXPOSE 3000
+EXPOSE 4321
 
 CMD ["mise", ""]

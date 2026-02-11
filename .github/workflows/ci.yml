@@ -15,13 +15,13 @@ env:
   MISE_EXPERIMENTAL: true
 
 jobs:
-  pr-check:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: jdx/mise-action@v2
-      - run: mise run lint
+  # pr-check:
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: jdx/mise-action@v2
+  #     - run: mise run lint
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 10

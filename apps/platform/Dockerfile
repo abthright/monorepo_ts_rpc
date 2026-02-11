@@ -37,10 +37,30 @@
 # note : different pipeline may apply for background jobs / go service / others
 
 
-FROM node:latest
+FROM debian:12-slim
 
 WORKDIR /app
+
+RUN apt-get update \
+    && apt-get -y --no-install-recommends install \
+        sudo curl git ca-certificates build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+SHELL ["/bin/bash", "-0", "pipefail", "-c"]
+
+RUN curl https://mise.run | sh
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/platform/package.json ./apps/platform
 
+RUN mise install
+
+COPY . .
+
+WORKDIR /app/apps/platform
+
+RUN mise build
+
+EXPOSE 3000
+
+CMD ["mise", ""]

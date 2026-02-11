@@ -35,3 +35,12 @@
 # start the nginx/server process
 
 # note : different pipeline may apply for background jobs / go service / others
+
+
+FROM node:latest
+
+WORKDIR /app
+
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY apps/platform/package.json ./apps/platform
+

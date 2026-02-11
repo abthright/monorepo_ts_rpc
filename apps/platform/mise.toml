@@ -14,3 +14,13 @@ outputs = ["node_modules/.pnpm/lock.yaml"]
 description = "Calls your dev script in package.json"
 run = "node --run dev"
 depends = ["pnpm-install"]
+
+[tasks.db-generate]
+description = "generate prisma"
+run = "pnpm dlx prisma generate"
+depends = ["pnpm-install"]
+
+[tasks.db-migrate]
+description = "migrate schema database"
+run = "pnpm dlx prisma migrate"
+depends = ["pnpm-install"]

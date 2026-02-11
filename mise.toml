@@ -22,3 +22,6 @@ run = [
   "docker compose up -d",
 ]
 
+[tasks.pnpm-prepare]
+description = "prepare husky"
+run = ["pnpm prepare"]

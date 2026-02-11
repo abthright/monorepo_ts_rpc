@@ -11,3 +11,14 @@ pnpm = "latest"
 [tasks.lint]
 description = "Run biome lint"
 run = "biome lint ."
+
+[tasks.deploy]
+description = "deploy the subject"
+run = [
+  "cd live/",
+  "git pull",
+  "docker compose build",
+  "docker compose down",
+  "docker compose up -d",
+]
+

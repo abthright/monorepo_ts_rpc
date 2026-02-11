@@ -43,4 +43,4 @@ jobs:
           host: 202.10.34.246
           username: deploy
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          run:  mise run deploy
+        run:  mise run deploy

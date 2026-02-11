@@ -13,6 +13,7 @@ concurrency:
 
 env:
   MISE_EXPERIMENTAL: true
+  MISE_
 
 jobs:
   pr-check:
